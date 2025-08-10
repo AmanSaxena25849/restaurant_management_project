@@ -5,7 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="{% static "home.css" %}">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #333;
+            min-height:100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header{
+            border-bottom: 1px solid #ddd;
+            padding:1rem;
+        }
+
+        .navbar a {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .navbar a{
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem;
+        }
+
+        .navbar a:hover{
+            color: black;
+        }
+
+        main{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center{
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: black;
+        }
+
+        section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        button{
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: 2px solid black;
+            border-radius: 8px;
+            cursor: pointer;
+            background: white;
+            color: black;
+        }
+
+        button:first-child{
+            background: black;
+            color: white;
+        }
+
+        button:hover{
+            opacity:0.8;
+        }
+
+        @media (max-width: 769px){
+            .navbar{
+                gap: 1rem;
+            }
+
+            section {
+                flex-direction: column;
+            }
+
+        }
+    </style>
 </head>
 <body>
     <header>
